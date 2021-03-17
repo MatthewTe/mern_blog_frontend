@@ -1,0 +1,24 @@
+/* Main Blog Homepage Grid System */
+.grid_container {
+    display: grid;
+    grid-template-columns:
+      minmax(1.2rem, 1fr)
+      minmax(auto, 87ch)
+      minmax(1.2rem, 1fr);
+  }
+
+.grid-mainbody {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.main-search {
+    color: rgb(139, 148, 158);
+    font-size: 15px;
+    height: 2rem;
+    border-width: 0.5px;
+    border-radius: 6px;
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: rgb(13, 17, 23);
+}

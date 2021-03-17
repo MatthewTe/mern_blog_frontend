@@ -1,0 +1,19 @@
+.nav {
+    display: flex;
+    align-items: left;
+    min-height: 2vh;
+    background-color: #161b22;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.nav-links {
+    width: 50%;
+    justify-content: space-around;
+    align-items: right;
+    list-style: none;
+}
+
+li {
+    color: rgb(201, 209, 217);
+}
