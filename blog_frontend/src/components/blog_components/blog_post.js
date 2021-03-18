@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import ReactMarkdown from 'react-markdown';
 import axios from "axios";
 
 // Importing styling: 
@@ -22,22 +21,18 @@ function BlogPost({ match }) {
         
         // Making axios request:
         const response = await axios.get(api_endpoint);
-        
+        const response_data = await response.data[0];
+
         // Converting the timestamp to a human readable format:
-        response.data.createdOn = new Date(response.data.createdOn).toDateString();
+        response_data.createdOn = new Date(response_data.createdOn).toDateString();
 
         // Adding data to the useState:
-        setData({post:response.data});
+        setData({post:response_data});
     };
     
     return (
         <div key={data.post._id} className="post-container">
-            <u><h1 className="post-title">{data.post.title}</h1></u>
-            <p className="post-date">Uploaded on: {data.post.createdOn}</p>
-            <div className="post-content">
-                <ReactMarkdown>
-                    {data.post.markdown}
-                </ReactMarkdown>
+            <div className="post-content" dangerouslySetInnerHTML={{ __html: data.post.content }}>      
             </div>
         </div>);
 };

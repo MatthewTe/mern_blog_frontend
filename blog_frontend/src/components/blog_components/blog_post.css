@@ -1,7 +1,10 @@
+
 .post-container {
     display: grid;
     color: rgb(201, 209, 217);
+    background-color: white;
     text-align: justify;
+    margin-top: -1rem;
 }
 
 .post-title {
@@ -14,7 +17,15 @@
     font-size: 13px;
 }
 
-.post-content {
-    text-align: center;
-    font-size: 16px;
+.post-container li {
+    color: black;
 }
+
+.post-container h1 {
+    text-align: center;
+}
+
+strong {
+    color: black;
+}
+
